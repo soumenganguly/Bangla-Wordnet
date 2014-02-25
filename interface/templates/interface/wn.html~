@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Bangla-WordNet</title>
+    <style></style>
+  </head>
+  <body bgcolor="#DCD4A7">
+<div id="header" width="100%" height="50px" style="color:#79350A;border:2px solid black;">
+<p><b><h2>SemanticNet of Human Body Parts</h2></b></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&#x09AE&#x09BE;&#x09A8;&#x09AC&#x09BF;&#x0995;&nbsp;&#x09B8;&#x0982;&#x09B8&#x09CD&#x09A5&#x09BE&nbsp;&#x0985&#x0982;&#x09B6&#x09C7;&#x09B0;&nbsp;&#x09B6;&#x09AC&#x09CD&#x09A6&#x09BE;&#x09B0&#x09CD&#x09A5;&#x09AC&#x09BF;&#x09A6&#x09CD&#x09AF&#x09BE;&nbsp;&#x09B8;&#x09AE&#x09CD&#x09AC;&#x09A8&#x09CD&#x09A7&#x09C0;&#x09DF;&nbsp;&#x09A8&#x09C7;&#x099F;
+</div>
+<br />
+<br />
+<div id="body" style="border:2px solid black;width:100%;height:400px;">
+<div id="figure" style="width:300px;height:400px;border:2px solid black;float:left;">
+<p>Figure Goes Here</p>
+</div>
+<div id="search_container" style="color:#79350A;padding-left:10px;height:400px;width:600px;border:2px solid black;float:left;">
+<br /><br />
+{% block search %}
+<div id="search_box" style="font-size:15;background-color:#FCF8E5;padding-left:5px;border:1px solid #CFC69D;width:400px;height:100px;">
+<p>Enter the name of the body part::&#x09B8;&#x09B8&#x09CD&#x09A5&#x09BE;&nbsp;&#x0996;&#x09A8&#x09CD&#x09A1&#x09C7;&#x09B0;&nbsp;&#x09A8&#x09BE&#x09AE;&nbsp;&#x09A6&#x09BF&#x09A8;</p>
+<input type="text" name="search_text"></input>
+<input type="button" action="submit" value="Search::&#x09B8;&#x09A8&#x09CD&#x09A7&#x09BE;&#x09A8;&nbsp;&#x0995;&#x09B0&#x09C1;&#x09A8;"></input>
+</div>
+{% endblock search %}
+</div>
+</div>
+</body>
+</html>

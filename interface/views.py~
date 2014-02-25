@@ -1,0 +1,15 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.template import loader,RequestContext
+from interface.models import Search
+
+# Create your views here.
+
+def search(request):
+    form=Search()
+    template=loader.get_template('interface/wn.html')
+    context=RequestContext(request,{
+        'form':form,
+    })
+    return HttpResponse(template.render(context))
+    
