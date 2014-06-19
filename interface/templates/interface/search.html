@@ -1,0 +1,18 @@
+{% extends "interface/base.html" %}
+{% block search_container %}
+<br />
+<br />
+{% for i in syn %}
+<div id="results" style="max-width:100%;max-height:100%;background-color:#FCF8E5;border:1px solid black;">
+<p>&#x09B6;&#x09AC&#x09CD&#x09A6;:&nbsp;{{ i.word }}</p>
+<p>&#x09AC&#x09BF;&#x09AD&#x09BE;&#x0997;:&nbsp;{{ i.category }}</p>
+<p>&#x09A7&#x09BE;&#x09B0;&#x09A8&#x09BE;:&nbsp;{{ i.concept }}</p>
+<p>&#x09B8;&#x09AE&#x09BE;&#x09B0&#x09CD&#x09A5;&#x0995;&nbsp;&nbsp;&#x09B6;&#x09AC&#x09CD&#x09A6;:&nbsp;{% for j in i.synset %}<a href="{% url 'search' j %}">{{ j }},</a>{% endfor %}</p>
+<p>&#x0989;&#x09A6&#x09BE;&#x09B9;&#x09B0;&#x09A8;:&nbsp;{{ i.example }}</p>
+<br />
+</div>
+<br />
+<br />
+{% endfor %}
+
+{% endblock search_container %}

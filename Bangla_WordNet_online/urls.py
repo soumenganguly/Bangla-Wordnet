@@ -10,5 +10,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^index/','interface.views.search',name='index'),
+    url(r'^index/$','interface.views.index',name='index'),
+    url(r'^search/(\w+)/$','interface.views.search',name='search')
 )

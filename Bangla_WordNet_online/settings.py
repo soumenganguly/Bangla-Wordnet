@@ -1,4 +1,4 @@
-
+import mongoengine
 """
 Django settings for Bangla_WordNet_online project.
 
@@ -59,11 +59,11 @@ WSGI_APPLICATION = 'Bangla_WordNet_online.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bnwordnet',
-        'USER':'soumen',
-        'PASSWORD':'soumen',
-        'HOST':'LOCALHOST',
+        'ENGINE': '',
+        'NAME': '',
+        'USER':'',
+        'PASSWORD':'',
+        'HOST':'',
         'PORT':'',
     }
 }
@@ -86,3 +86,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#MongoDB database connectivity.
+_MONGODB_USER='root'
+_MONGODB_PASSWD='root'
+_MONGODB_HOST='localhost'
+_MONGODB_NAME='words'
+_MONGODB_DATABASE_HOST='mongodb://%s:%s@%s/%s'%(_MONGODB_USER,_MONGODB_PASSWD,_MONGODB_HOST,_MONGODB_NAME)
+
+mongoengine.connect(_MONGODB_NAME,host=_MONGODB_DATABASE_HOST)
+
