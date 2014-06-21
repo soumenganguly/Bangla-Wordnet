@@ -11,5 +11,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^index/$','interface.views.index',name='index'),
-    url(r'^search/(\w+)/$','interface.views.search',name='search')
+    url(r'^search/(\D+)/$','interface.views.search',name='search')
 )

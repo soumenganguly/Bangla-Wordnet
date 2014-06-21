@@ -91,7 +91,7 @@ STATIC_URL = '/static/'
 _MONGODB_USER='root'
 _MONGODB_PASSWD='root'
 _MONGODB_HOST='localhost'
-_MONGODB_NAME='words'
+_MONGODB_NAME='online'
 _MONGODB_DATABASE_HOST='mongodb://%s:%s@%s/%s'%(_MONGODB_USER,_MONGODB_PASSWD,_MONGODB_HOST,_MONGODB_NAME)
 
 mongoengine.connect(_MONGODB_NAME,host=_MONGODB_DATABASE_HOST)

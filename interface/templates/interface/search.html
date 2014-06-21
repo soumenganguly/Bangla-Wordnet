@@ -1,11 +1,24 @@
 {% extends "interface/base.html" %}
 {% block search_container %}
 <br />
+{% block search %}
+<div id="search_box" style="font-size:15;background-color:#FCF8E5;padding-left:5px;border:1px solid #CFC69D;width:400px;height:100px;">
+<p>Enter the name of the body part::&#x09B8;&#x0982;&#x09B8&#x09CD&#x09A5&#x09BE;&nbsp;&#x0996;&#x09A8&#x09CD&#x09A1&#x09C7;&#x09B0;&nbsp;&#x09A8&#x09BE&#x09AE;&nbsp;&#x09A6&#x09BF&#x09A8;</p>
+{% block form %}
+<form name="search" action="../../index/" method="post">
+{% csrf_token %}
+{{ form.word }}
+<input type="submit" value="Search::&#x09B8;&#x09A8&#x09CD&#x09A7&#x09BE;&#x09A8;&nbsp;&#x0995;&#x09B0&#x09C1;&#x09A8;" />
+</form>
+{% endblock form %}
+</div>
+{% endblock search %}
+
 <br />
 {% for i in syn %}
 <div id="results" style="max-width:100%;max-height:100%;background-color:#FCF8E5;border:1px solid black;">
 <p>&#x09B6;&#x09AC&#x09CD&#x09A6;:&nbsp;{{ i.word }}</p>
-<p>&#x09AC&#x09BF;&#x09AD&#x09BE;&#x0997;:&nbsp;{{ i.category }}</p>
+<p>&#x09AC&#x09BF;&#x09AD&#x09BE;&#x0997;:&nbsp;{{ i.cat }}</p>
 <p>&#x09A7&#x09BE;&#x09B0;&#x09A8&#x09BE;:&nbsp;{{ i.concept }}</p>
 <p>&#x09B8;&#x09AE&#x09BE;&#x09B0&#x09CD&#x09A5;&#x0995;&nbsp;&nbsp;&#x09B6;&#x09AC&#x09CD&#x09A6;:&nbsp;{% for j in i.synset %}<a href="{% url 'search' j %}">{{ j }},</a>{% endfor %}</p>
 <p>&#x0989;&#x09A6&#x09BE;&#x09B9;&#x09B0;&#x09A8;:&nbsp;{{ i.example }}</p>

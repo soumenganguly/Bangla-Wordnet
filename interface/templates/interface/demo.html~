@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Index</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+<div id="header" style="background-color:blue;width:100%;height:70px;border:1px solid black;">
+<p><h3 style="color:white;">Bengali Wordnet</h3></p>
+</div>
+<br />
+
+<!-- Search block -->
+<div id="search" style="float:left;max-width:30%;max-height:100%;border:1px solid black;">
+<p align="center">
+{% block form %}
+<form action="" method="post">
+{% csrf_token %}
+<table>
+<tr>
+<td>{{ form.word }}</td>
+<td><input type="submit" value="Search" /></td>
+</tr>
+</table>
+</form>
+{% endblock form %}
+</p>
+</div>
+
+<!-- Results block -->
+<div id="results" style="float:right;max-width:70%;max-height:100%;border:1px solid black;">
+{% block results %}
+{% for i in syn %}
+<br />
+<br />
+<div id="results" style="max-width:100%;max-height:100%;background-color:#FCF8E5;border:2px solid #CFC69D;">
+<p>&#x09B6;&#x09AC&#x09CD&#x09A6;-&nbsp;&nbsp;{{ i.word }}</p>
+<p>&#x09AC&#x09BF;&#x09AD&#x09BE;&#x0997;-&nbsp;&nbsp;{{ i.cat }}</p> <!-- category -->
+<p>&#x09A7&#x09BE;&#x09B0;&#x09A8&#x09BE;-&nbsp;&nbsp;{{ i.concept }}</p><!-- concept -->
+<p>&#x09B8;&#x09AE&#x09BE;&#x09B0&#x09CD&#x09A5;&#x0995;&nbsp;&nbsp;&#x09B6;&#x09AC&#x09CD&#x09A6;-&nbsp;&nbsp;{% for j in i.synset %}<u><a href="{% url 'search' j %}">{{ j }}</a></u>&nbsp;&nbsp;{% endfor %}</p><!-- synsets -->
+<p>&#x0989;&#x09A6&#x09BE;&#x09B9;&#x09B0;&#x09A8;-&nbsp;&nbsp;{{ i.example }}</p><!-- example -->
+</div>
+{% endfor %}
+{% endblock results %}
+
+</div>
+</body>
+</html>
