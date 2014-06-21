@@ -1,1 +1,1 @@
-Semantic Net in Bengali Language.
+Bangla Wordnet.
