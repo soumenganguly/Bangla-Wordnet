@@ -1,7 +1,9 @@
+{% load staticfiles %}
 <html>
   <head>
     <title>Index</title>
     <meta content="">
+    <script type="text/javascript" src="{% static "interface/vk_easy.js?vk_layout=IN%20Bengali" %}"></script>
     <style></style>
   </head>
   <body>
@@ -18,7 +20,8 @@
 {% csrf_token %}
 <table>
 <tr>
-<td>{{ form.word }}</td>
+<td><input id="id_word" name="word" maxlength="30" type="text" class="keyboardInput"/></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td><input type="submit" value="Search" /></td>
 </tr>
 </table>

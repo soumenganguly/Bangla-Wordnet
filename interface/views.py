@@ -20,7 +20,7 @@ def index(request):
                 'syn':syn,
                 'form':form,
             })
-            return HttpResponse(template.render(context))
+        return HttpResponse(template.render(context))
     else:
         form=Search()
         template=loader.get_template('interface/demo.html')
