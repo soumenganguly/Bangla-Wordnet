@@ -1,0 +1,10 @@
+{% extends "interface/demo.html" %}
+{% block results %}
+<div id="usage" style="max-width:100%;max-height:100%;background-color:#FCF8E5;border:2px solid #CFC69D;">
+<p><ol>[To enable on-screen keyboard]
+    <li>1. Click the keyboard icon, appearing beside the search box</li>
+    <li>2. Select a Bengali layout from the scroll down menu at the bottom right hand corner.</li>
+    <li>3. Enter your word by choosing the letters from the keyboard.</li>
+      </ol>
+</div>
+{% endblock results %}

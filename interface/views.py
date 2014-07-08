@@ -39,3 +39,18 @@ def search(request,word):
         })
     return HttpResponse(template.render(context))
 
+def about(request):
+    template=loader.get_template('interface/about.html')
+    form=Search()
+    context=RequestContext(request,{
+        'form':form,
+        })
+    return HttpResponse(template.render(context))
+
+def usage(request):
+    template=loader.get_template('interface/usage.html')
+    form=Search()
+    context=RequestContext(request,{
+        'form':form,
+        })
+    return HttpResponse(template.render(context))
