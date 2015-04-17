@@ -8,7 +8,7 @@ Bangla Wordnet is a lexical database for the bengali language inspired from the 
 
 2.Set up a working installation of django,preferrably inside a virtual environment.
 
-3.Download and install MongoDB([here](www.mongodb.org/downloads)),pymongo and NLTK.
+3.Download and install MongoDB [here](www.mongodb.org/downloads),pymongo and NLTK.
 
 4.Start the mongod server.
 
