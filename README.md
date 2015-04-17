@@ -14,7 +14,7 @@ Bangla Wordnet is a lexical database for the bengali language inspired from the 
 
 5.Run load.py file from the *load* directory.
 
-6.Run the django server and point to your [localhost](http://127.0.0.1)
+6.Run the django server and point to your [localhost](http://127.0.0.1:8000/index)
 
 7.There's no step 7.
 
