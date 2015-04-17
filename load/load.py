@@ -2,7 +2,7 @@ import nltk
 import pymongo
 from pymongo import MongoClient
 
-a=nltk.data.load('corpora/bangla/exp.yaml')
+a=nltk.data.load('../synsets.yaml')
 
 client=MongoClient()
 db=client['online']
